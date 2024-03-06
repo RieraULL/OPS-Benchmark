@@ -167,6 +167,39 @@ class B_instance_config_t : public instance_set_config_t
 		
 };
 
+class B_small_instance_config_t : public instance_set_config_t
+{
+  public:
+    B_small_instance_config_t(const string path)
+      : instance_set_config_t("B",
+                              path,
+                              EMIR_B,
+                              {30, 35, 40, 45, 50, 55},
+                              { 0.25, 0.50, 0.75 },
+                              CSU_EMIR_t(),
+                              0,
+                              0)
+    {
+	upper_limit_ = CSU_.get_H() * 0.5 - CSU_.get_h() * 0.5;
+	lower_limit_ = -CSU_.get_H() * 0.5 + CSU_.get_h() * 0.5;
+    }
+
+    virtual ~B_small_instance_config_t(void)
+    {
+    }
+	
+	virtual void assignment(const pair<int,double>& bar, const int i, vector<vector<int> >& Jk) const
+	{
+		Jk[bar.first].push_back(i + 1);
+
+		if (bar.second > 0.5)
+			Jk[bar.first + 1].push_back(i + 1);
+		else
+			Jk[bar.first - 1].push_back(i + 1);		
+	}	
+		
+};
+
 
 class LB_instance_config_t : public instance_set_config_t
 {
@@ -213,6 +246,29 @@ class C_instance_config_t : public instance_set_config_t
     }
 
     virtual ~C_instance_config_t(void)
+    {
+    }
+	
+	virtual void assignment(const pair<int,double>& bar, const int i, vector<vector<int> >& Jk) const
+	{
+		Jk[bar.first].push_back(i + 1);
+		Jk[bar.first - 1].push_back(i + 1);
+		Jk[bar.first + 1].push_back(i + 1);	
+	}	
+		
+};
+
+class C_small_instance_config_t : public instance_set_config_t
+{
+  public:
+    C_small_instance_config_t(const string path)
+      : instance_set_config_t("C", path, EMIR_C, {10, 15, 20, 25, 30, 35, 40}, { 0.25, 0.50, 0.75 }, CSU_EMIR_t(), 0, 0)
+    {
+	upper_limit_ = CSU_.get_H() * 0.5 - CSU_.get_h() * 1.5;
+	lower_limit_ = -CSU_.get_H() * 0.5 + CSU_.get_h() * 1.5;
+    }
+
+    virtual ~C_small_instance_config_t(void)
     {
     }
 	

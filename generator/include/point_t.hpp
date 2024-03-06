@@ -25,8 +25,8 @@ public:
 
     ostream& write(ostream& os) const;
     
-    inline const double get_x(void) const {return first;}
-    inline const double get_y(void) const {return second;}
+    inline double get_x(void) const {return first;}
+    inline double get_y(void) const {return second;}
 
     void get_json(json& point) const;
     void set_json(const json& point);

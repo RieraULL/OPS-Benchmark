@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "json.hpp"
+#include "../json/json.hpp"
 using json = nlohmann::json;
 
 using namespace std;
@@ -24,37 +24,37 @@ public:
     CSU_setup_t(int m, double H, double W, double d1, double d2, double b_sp);
     virtual ~CSU_setup_t(void);
 
-    inline const int get_m(void) const
+    inline int get_m(void) const
     {
         return m_;
     }
 
-    inline const double get_h(void) const
+    inline double get_h(void) const
     {
         return get_H() / (double)(get_m());
     }
 
-    inline const double get_H(void) const    
+    inline double get_H(void) const    
     {
         return dim_[0];
     }
 
-    inline const double get_W(void) const
+    inline double get_W(void) const
     {
         return dim_[1];
     }
 
-    inline const double get_d1(void) const
+    inline double get_d1(void) const
     {
         return d_[0];
     }
 
-    inline const double get_d2(void) const
+    inline double get_d2(void) const
     {
         return d_[1];
     }
 
-    inline const double b_spd(void) const
+    inline double b_spd(void) const
     {
         return b_spd_;
     }

@@ -35,6 +35,23 @@ int main(int argc, char **argv)
 	target_generator.generate(source_config, target_sets);
 	
 	const string path(argv[1]);
+
+	// Generating Family B
+	{
+		B_small_instance_config_t  B_config(path); 
+		EMIR_set_generator_t B_set_generator(B_config, target_sets);
+		
+		B_set_generator.generate();		
+	}	
+	
+	
+	// Generating Family C
+	{
+		C_small_instance_config_t  C_config(path); 
+		EMIR_set_generator_t C_set_generator(C_config, target_sets);
+		
+		C_set_generator.generate();		
+	}
 	
 	/*
 	// Generating Family A
@@ -43,9 +60,9 @@ int main(int argc, char **argv)
 		EMIR_set_generator_t A_set_generator(A_config, target_sets);
 		
 		A_set_generator.generate();		
-	}
+	}*/
 	
-	// Generating Family B
+	/* // Generating Family B
 	{
 		B_instance_config_t  B_config(path); 
 		EMIR_set_generator_t B_set_generator(B_config, target_sets);
@@ -60,8 +77,9 @@ int main(int argc, char **argv)
 		EMIR_set_generator_t C_set_generator(C_config, target_sets);
 		
 		C_set_generator.generate();		
-	}
+	}*/
 
+	/*
 	// Generating Family D
 	{
 		D_instance_config_t  D_config(path); 
@@ -72,7 +90,7 @@ int main(int argc, char **argv)
 	 
 	
 	// Generating Family LA
-	{
+	/*{
 		LA_instance_config_t  LA_config(path); 
 		EMIR_set_generator_t A_set_generator(LA_config, target_sets);
 		
@@ -102,7 +120,7 @@ int main(int argc, char **argv)
 		EMIR_set_generator_t D_set_generator(LD_config, target_sets);
 		
 		D_set_generator.generate();		
-	}
+	}*/
 	 
 	
 	return 0;

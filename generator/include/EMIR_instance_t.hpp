@@ -5,7 +5,7 @@
 #include <string>
 
 #include "matrix.hpp"
-#include "json.hpp"
+#include "../json/json.hpp"
 
 #include "instance_set_config_t.hpp"
 #include "EMIR_target_set_t.hpp"
