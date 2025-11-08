@@ -28,7 +28,7 @@ This repository contains the generated instances themselves, together with the v
 
 ## Citation
 
-If you use any of the instances, generation tools, or solution data contained in this repository, please cite the following publication:
+If you use any of the instances, or solution data contained in this repository, please cite the following publication:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17557917.svg)](https://doi.org/10.5281/zenodo.17557917)
 
