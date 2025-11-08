@@ -1,3 +1,0 @@
-/home/riera/Documentos/GitHub/OPS-Benchmark/build/CMakeFiles/OPS_benchmark_generator.dir
-/home/riera/Documentos/GitHub/OPS-Benchmark/build/CMakeFiles/edit_cache.dir
-/home/riera/Documentos/GitHub/OPS-Benchmark/build/CMakeFiles/rebuild_cache.dir
