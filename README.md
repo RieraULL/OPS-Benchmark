@@ -15,9 +15,6 @@ It also contains the generated instances themselves, together with the visual re
 
 ### Repository Structure
 
-- **`build/`** and **`generator/`**  
-  Contain the source code and compiled tools responsible for generating the benchmark instances.
-
 - **`input/`**  
   Includes the generated input instances in **JSON** format, organized into separate instance families.  
   Each family is structured into two subdirectories:
