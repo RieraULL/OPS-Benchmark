@@ -30,7 +30,7 @@ This repository contains the generated instances themselves, together with the v
 
 If you use any of the instances, generation tools, or solution data contained in this repository, please cite the following publication:
 
-[https://doi.org/10.5281/zenodo.17557917](https://doi.org/10.5281/zenodo.17557917)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17557917.svg)](https://doi.org/10.5281/zenodo.17557917)
 
 > J. Riera-Ledesma, J.-J. Salazar-González,  
 > *Selective Routing Problem with Synchronization*,  
