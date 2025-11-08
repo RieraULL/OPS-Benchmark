@@ -10,8 +10,7 @@ ISSN 0305-0548,
 
 ## Description
 
-This repository provides the software tool used for generating the families of benchmark instances employed in the experimental evaluation of the algorithm proposed in the aforementioned paper.  
-It also contains the generated instances themselves, together with the visual representation of the obtained solutions and their corresponding objective values.
+This repository contains the generated instances themselves, together with the visual representation of the obtained solutions and their corresponding objective values.
 
 ### Repository Structure
 
